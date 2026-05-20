@@ -51,7 +51,7 @@ export default function ResultsScreen() {
       }, token);
       setSaved(true);
       showToast('success', 'Results Saved!', 'Redirecting to home…');
-      setTimeout(() => router.replace('/(tabs)'), 1800);
+      setTimeout(() => router.replace('/(tabs)/home'), 1800);
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : 'Failed to save';
       showToast('error', 'Save Failed', msg);
